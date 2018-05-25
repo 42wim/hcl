@@ -15,7 +15,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/hashicorp/hcl/hcl/printer"
+	"github.com/42wim/hcl/hcl/printer"
 )
 
 var (
