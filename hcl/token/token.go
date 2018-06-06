@@ -142,7 +142,8 @@ func (t Token) Value() interface{} {
 	case IDENT:
 		return t.Text
 	case HEREDOC:
-		return unindentHeredoc(t.Text)
+		return t.Text
+		//return unindentHeredoc(t.Text)
 	case STRING:
 		// Determine the Unquote method to use. If it came from JSON,
 		// then we need to use the built-in unquote since we have to
