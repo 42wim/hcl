@@ -364,7 +364,9 @@ func escapeQuotedStringLit(s string) []byte {
 			buf = append(buf, '\\', '"')
 		case '\\':
 			buf = append(buf, '\\', '\\')
-		case '$', '%':
+		case '$':
+			buf = appendRune(buf, r)
+		case '%':
 			buf = appendRune(buf, r)
 			remain := s[i+1:]
 			if len(remain) > 0 && remain[0] == '{' {
